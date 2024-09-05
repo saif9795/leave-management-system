@@ -5,7 +5,7 @@ import adminRouter from "./routes/admin.route.js";
 import pool from './db/dbConnection.js';
 
 const app = express();
-const PORT = 3000;
+const PORT = 8000;
 app.use(express.json());
 
 app.get("/", (req,res)=>{

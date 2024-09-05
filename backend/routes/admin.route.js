@@ -3,9 +3,10 @@ import { adminGetRequest, adminPostDecision } from '../controller/admin.controll
 
 const router = express.Router();
 
-//Get Leave Request for Admin
+//Get Leave Request Module for Admin
 router.get("/request", adminGetRequest);
 
+//Post Decision Module for Admin
 router.post("/decision", adminPostDecision);
 
 

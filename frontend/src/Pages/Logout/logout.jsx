@@ -1,6 +1,7 @@
 const Logout = () => {
-    return <div>
 
+    return <div>
+        
         <div className="container">
             <ul className="mt-5 p-5 justify-content-center">
                 <p className="p-3 rounded-pill bg-success text-white border text-center fs-4">Logged Out</p>

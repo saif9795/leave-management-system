@@ -1,6 +1,6 @@
 const RequestView = () => {
 
-    const noViewRequest = true;
+    const noViewRequest = false;
 
   return <div>
     { noViewRequest ? <NoViewRequest /> : (
@@ -11,7 +11,7 @@ const RequestView = () => {
   <thead>
     <tr>
       <th scope="col">ReqID</th>
-      <th scope="col">Name</th>
+      <th scope="col">Username</th>
       <th scope="col">From</th>
       <th scope="col">To</th>
       <th scope="col">Reason</th>
@@ -20,14 +20,14 @@ const RequestView = () => {
   <tbody>
     <tr>
       <th scope="row">1001</th>
-      <td>Md. Y</td>
+      <td>y12345</td>
       <td>11</td>
       <td>12</td>
       <td>Sick</td>
     </tr>
     <tr>
       <th scope="row">1002</th>
-      <td>Md. Z</td>
+      <td>z12345</td>
       <td>12</td>
       <td>13</td>
       <td>Fever</td>

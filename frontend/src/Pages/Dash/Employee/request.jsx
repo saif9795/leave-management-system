@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
 import MakeRequest from "../../../Components/makeRequest";
 import Navbar from "../../../Components/navbar"
-
+import { useNavigate } from "react-router-dom";
 const Request = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = () =>{
+      navigate("/employee/success");}
   return <div>
 <Navbar />
 
@@ -15,13 +20,13 @@ const Request = () => {
             <span className="fs-5 d-none d-sm-inline">Menu</span>
             <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start " id="menu">
               <li className="nav-item">
-                <a href="#" className="nav-link align-middle px-0 text-white">
+                <Link to={"/employee/request"} className="nav-link align-middle px-0 text-white">
                   <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline ">Make a Request</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link px-0 align-middle text-white">
-                  <i className="fs-4 bi-table"></i> <span className="ms-1 d-none d-sm-inline">View Request Status</span></a>
+                <Link to={"/employee/viewdecision"} className="nav-link px-0 align-middle text-white">
+                  <i className="fs-4 bi-table"></i> <span className="ms-1 d-none d-sm-inline">View Request Status</span></Link>
               </li>
             </ul>
             <hr />
@@ -32,7 +37,7 @@ const Request = () => {
             <h3>Make a Leave Request</h3>
             <MakeRequest />
             <div className="d-flex justify-content-center">
-                <button type="button" className="rounded-pill btn btn-success justify-content-center fw-bold">SUBMIT</button>
+                <button type="button" className="rounded-pill btn btn-success justify-content-center fw-bold" onClick={handleSubmit}>SUBMIT</button>
               </div>
             
         </div>
